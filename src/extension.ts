@@ -1,26 +1,35 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  // Define the commands that will be executed when the buttons are clicked
+  const undoCommand = 'undo-redo-buttons.undo';
+  const redoCommand = 'undo-redo-buttons.redo';
+  context.subscriptions.push(vscode.commands.registerCommand(undoCommand, undo));
+  context.subscriptions.push(vscode.commands.registerCommand(redoCommand, redo));
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "undo-redo-buttons" is now active!');
+  // Create the undo button
+  const undoButton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
+  undoButton.text = 'Undo';
+  undoButton.color = 'var(--vscode-tab-activeBorder)';
+  undoButton.command = undoCommand;
+  undoButton.show();
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('undo-redo-buttons.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Undo Redo Buttons!');
-	});
-
-	context.subscriptions.push(disposable);
+  // Create the redo button
+  const redoButton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
+  redoButton.text = 'Redo';
+  redoButton.color = 'var(--vscode-tab-activeBorder)';
+  redoButton.command = redoCommand;
+  redoButton.show();
 }
 
-// This method is called when your extension is deactivated
+function undo() {
+  // Perform the undo action when the button is clicked
+  vscode.commands.executeCommand('undo');
+}
+
+function redo() {
+  // Perform the redo action when the button is clicked
+  vscode.commands.executeCommand('redo');
+}
+
 export function deactivate() {}
