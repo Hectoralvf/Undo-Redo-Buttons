@@ -1,3 +1,10 @@
+/**
+ * File: extension.ts
+ * Description: Extension that adds accessible buttons for the undo and redo commands
+ * Author: Héctor Álvarez Fernández
+ * License: MIT
+ */
+
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
