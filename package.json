@@ -3,7 +3,7 @@
   "displayName": "Undo Redo Buttons",
   "publisher": "hectoralvf",
   "description": "Adds accessible buttons for the undo and redo commands",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "icon": ".images/icon-128x128.png",
   "engines": {
     "vscode": "^1.74.0"
@@ -25,14 +25,28 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.undo",
-        "title": "Undo"
+        "command": "undo-redo-buttons.undo",
+        "title": "Undo",
+        "icon": "$(discard)"
       },
       {
-        "command": "extension.redo",
-        "title": "Redo"
+        "command": "undo-redo-buttons.redo",
+        "title": "redo",
+        "icon": "$(redo)"
       }
-    ]
+    ],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "undo-redo-buttons.undo",
+					"group": "navigation@999990"
+				},
+				{
+					"command": "undo-redo-buttons.redo",
+					"group": "navigation@999991"
+				}
+			]
+		}
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
