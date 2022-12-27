@@ -3,6 +3,7 @@
   "displayName": "Undo Redo Buttons",
   "description": "Adds accessible buttons for the undo and redo commands",
   "version": "1.0.0",
+  "icon": ".images/icon-128x128.png",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -11,7 +12,8 @@
 		"Other"
 	],
 	"repository": {
-		"type": "git"
+		"type": "git",
+    "url": "https://github.com/Hectoralvf/Undo-Redo-Buttons"
 	},
   "activationEvents": [
     "*",
