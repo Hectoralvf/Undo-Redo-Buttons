@@ -1,6 +1,7 @@
 {
   "name": "undo-redo-buttons",
   "displayName": "Undo Redo Buttons",
+  "publisher": "hectoralvf",
   "description": "Adds accessible buttons for the undo and redo commands",
   "version": "1.0.0",
   "icon": ".images/icon-128x128.png",
