@@ -1,17 +1,19 @@
 # Undo Redo Buttons
 
-This Visual Studio Code extension adds accessible buttons on the status bar for the undo and redo commands.
+This Visual Studio Code extension adds accessible buttons on the top right of the editor for the undo and redo commands.
 
 ## Features
 
-- Adds two buttons to the status bar: one for undoing the last action, and one for redoing the last action
-- The buttons support for using Unicode symbols as the labels and use the current theme accent color
+- Adds two buttons to the editor: one for undoing the last action, and one for redoing the last action
 
 ## Development
 
 This extension was, as my previous extension, developed using OpenAI's ChatGPT December 15 Version.
 
 ## Release Notes
+
+- **v1.1.0** (27-12-2022)
+  - The buttons are moved to the top right corner of the editor.
 
 - **v1.0.1** (27-12-2022)
   - Added support for using Unicode symbols as the labels for the undo and redo buttons.

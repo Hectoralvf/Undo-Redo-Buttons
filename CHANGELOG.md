@@ -2,6 +2,10 @@
 
 ## List of Changes
 
+- **v1.1.0** (27-12-2022)
+  - The buttons are moved to the top right corner of the editor. 
+  - The buttons use native icon references, and should work with icon themes. 
+
 - **v1.0.1** (27-12-2022)
   - Added support for using Unicode symbols as the labels for the undo and redo buttons.
   - If the symbols are supported by the system, they will be used as the labels for the buttons. If not, the buttons will fall back to using the text labels.
